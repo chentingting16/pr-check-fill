@@ -8,9 +8,10 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout 
+        uses:  actions/checkout@2
       - name: check fill
-      - uses: actions/checkout@2
-      - uses: ./
+        uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filter-start: '|'
