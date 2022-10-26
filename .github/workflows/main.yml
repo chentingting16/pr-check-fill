@@ -1,0 +1,18 @@
+name: ctt test
+
+on:
+  issues:
+    types:[opened, edited, reopened]
+  
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check fill
+        uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filter-start: '|'
+          require-include: 'English'
+          comment-body: 'Check failed.'
+          skip-title-start: 'docs'
