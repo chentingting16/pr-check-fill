@@ -8,8 +8,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout 
-        uses:  actions/checkout@2
+      - uses: actions/checkout@v2
       - name: check fill
         uses: ./
         with:
