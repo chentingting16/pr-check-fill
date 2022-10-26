@@ -2,7 +2,7 @@ name: ctt test
 
 on:
   issues:
-    types:[opened, edited, reopened]
+    types: [opened, edited, reopened]
   
 jobs:
   check:
